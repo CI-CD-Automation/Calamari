@@ -88,11 +88,6 @@ namespace Calamari.Deployment
         {
             foreach (var convention in conventions.OfType<IRollbackConvention>())
             {
-                if (deployment.Variables.GetFlag(SpecialVariables.Action.SkipRemainingConventions))
-                {
-                    break;
-                }
-
                 convention.Cleanup(deployment);
             }
         }
