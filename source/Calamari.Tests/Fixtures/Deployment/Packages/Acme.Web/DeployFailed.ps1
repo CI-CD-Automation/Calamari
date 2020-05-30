@@ -1,1 +1,1 @@
-﻿Write-Host "I have failed! DeployFailed.ps1"
+﻿Write-Host "I have failed DeployFailed.ps1 " + $OctopusLastErrorMessage + "!"
